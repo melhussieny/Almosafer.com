@@ -1,0 +1,517 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: OpenSans;
+    font-size:14px;
+}
+a:hover,a:focus{
+
+    text-decoration:none;
+    color:#fff;
+}
+.mainBtn
+{
+    background:#bf3a91;
+    color:#fff;
+    min-width:215px;
+    text-align:center;
+    padding:7px;
+    border-radius:4px;
+    display:inline-block;
+    position:relative;
+    transition: all 500ms ease; 
+}
+.mainBtn:before
+{
+    content:'';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 34px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 2s ease;
+}
+.mainBtn:hover:before {
+	width: 100%;
+}
+/***** Top Navigation *****/
+.navbar-default
+{
+    background:rgba(0, 0, 0, 0.7);
+    border-radius: 0;
+    color: #fff;
+    margin: 0;
+    border: 0;
+}
+.navbar-default .navbar-nav > li > a
+{
+    color:#fff;
+}
+
+/***** Top Navigation  *****/
+/***** featured Area *****/
+.featuredArea{
+
+    background-image:url(../img/featuredArea/1.jpg);
+    height:100vh;
+    background-size:cover;
+    padding-top:107px;
+    margin-bottom:30px;
+}
+.featuredArea h1{
+
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.42;
+    letter-spacing: -1px;
+    color: #333
+}
+.featuredArea p{
+
+    font-size:28px;
+}
+/***** End featured Area *****/
+
+/***** 3D Carousel *****/
+.Carousel h1{
+
+    color:#333;
+    margin-bottom:60px;
+    position:relative;
+    font-weight:bold;
+}
+.Carousel h1:after{
+
+    content: '';
+    display: block;
+    width: 150px;
+    height: 8px;
+    background-color: #333;
+    position: absolute;
+    bottom: -20px;
+}
+.swiper-container
+{
+    height:575px;
+}
+.tab-content
+{
+    padding:30px 40px;
+}
+.slide-1
+{
+    background:url(../img/Carousel/AbuDhabi.png) center center no-repeat;
+    width:360px;
+}
+.slide-2
+{
+    background:url(../img/Carousel/Amsterdam.png) center center no-repeat;
+    width:360px;
+}
+.slide-3
+{
+    background:url(../img/Carousel/Brussels.png) center center no-repeat;
+    width:360px;
+}
+.slide-4
+{
+    background:url(../img/Carousel/Cairo.png) center center no-repeat;
+    width:360px;
+}
+.slide-5
+{
+    background:url(../img/Carousel/Dubai.png) center center no-repeat;
+    width:360px;
+}
+.slide-6
+{
+    background:url(../img/Carousel/Hyderabad.png) center center no-repeat;
+    width:360px;
+}
+.slide-7
+{
+    background:url(../img/Carousel/Manama.png) center center no-repeat;
+    width:360px;
+}
+.slide-8
+{
+    background:url(../img/Carousel/Manila.png) center center no-repeat;
+    width:360px;
+}
+.slide-9
+{
+    background:url(../img/Carousel/NewYork.png) center center no-repeat;
+    width:360px;
+}
+.slideDetails
+{
+    bottom:0px;
+    color:#fff;
+    position:absolute;
+    width:100%;
+    padding:20px 20px 15px 20px
+}
+.slideDetails h2{
+
+    font-size: 36px;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.slideDetails p {
+
+    font-size:16px;
+    margin-bottom:30px;
+    text-transform:uppercase;
+}
+.slideDetails p + p{
+
+    margin-bottom:0;
+}
+.swiper-slide-active
+{
+    opacity:1;
+    transition:700ms all ease-in-out;
+}
+
+/***** End 3D Carousel *****/
+
+/***** flight Search Section *****/
+
+.flightSearchCore
+{
+    
+}
+
+.flightSearch h1{
+
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    margin-bottom:60px; 
+}
+.flightSearch h1:after
+{
+    background-color: #fff;
+    bottom: -20px;
+    content: '';
+    display: block;
+    height: 9px;
+    letter-spacing: -0.5px;
+    position: absolute;
+    width: 180px;
+}
+.flightSearch h2{
+
+    font-size:28px;
+    color:#fff;
+    font-weight:bold;
+}
+.flightSearch {
+    background-color: rgba(24, 100, 134, 0.84);
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDA3NmM0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM0YmFkZDIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjMzODk5OTk5OTk5OTk5OTk3Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzI3OGZiYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjgyOTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiM4ZWQ0ZjEiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(0, 118, 196)),color-stop(0.339, rgb(75, 173, 210)),color-stop(0.683, rgb(39, 143, 186)),color-stop(1, rgba(142, 212, 241, 0)));
+    /* Android 2.3 */
+    background-image: -webkit-repeating-linear-gradient(top,rgb(0, 118, 196) 0%,rgb(75, 173, 210) 33.9%,rgb(39, 143, 186) 68.3%,rgba(142, 212, 241, 0) 100%);
+    /* IE10+ */
+    background-image: repeating-linear-gradient(to bottom, #0378c4 50%, transparent 100%);
+    background-image: -ms-repeating-linear-gradient(top,rgb(0, 118, 196) 0%,rgb(75, 173, 210) 33.9%,rgb(39, 143, 186) 68.3%,rgba(142, 212, 241, 0) 100%);
+}
+
+/***** flight Search tabs *****/
+.flightsTabs
+{
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 4px;
+    min-height:150px;
+    margin-bottom:120px;
+}
+ 
+.itemOne:before,.itemTwo:before,.itemThree:before{
+
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, #1478b9f2 53%, transparent 100%);
+    height: 30%;
+    width: 100%;
+    content: '';
+}
+.itemOne,.itemTwo,.itemThree
+{
+    background-image:url(../img/1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:right center;
+    height: 400px;
+    max-width:100%;
+    position:relative;
+}
+.itemOne h3,.itemTwo h3, .itemThree h3 {
+    position: absolute;
+    bottom: 0;
+    font-size: 175px;
+    color: #fff;
+    margin: 0;
+    left:10px;
+    line-height: 1;
+    font-weight: bold;
+    opacity: 0.4;
+}
+.itemOne h4,.itemTwo h4, .itemThree h4
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    color: #fff;
+    font-weight: bold;
+    width: 240px;
+    font-size: 28px;
+}
+.itemOne
+{
+    background-image:url(../img/2.jpg);
+}
+
+.itemThree
+{
+    background-image:url(../img/3.jpg);
+}
+.flightSearchCore [class*="col-"], .flightSearchCore .row
+{
+    padding:0;
+    margin:0;
+}
+/***** End flight Search Section *****/
+
+/********* How It Works Section **********/
+.howItWorks
+{
+    margin-bottom:50px;
+}
+.howItWorks h1{
+    margin-bottom: 100px;
+    font-weight: bold;
+    position:relative;
+}
+
+.howItWorks h2{
+    color: #751b53;
+    font-size: 24px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.howItWorks h2:after,.howItWorks h1:after
+{
+    content: '';
+    display: block;
+    height: 6px;
+    width: 100px;
+    background-color: #751b53;
+    position: absolute;
+    bottom: -15px;
+}
+.howItWorks h1:after
+{
+ background-color: #333;
+ width: 150px;
+ height: 8px;
+}
+.howItWorks p{
+
+    color:#777;
+    font-size:16px;
+}
+
+/********* End How It Works Section **********/
+.cardsSection
+{
+    background:#4d1965;
+    min-height:610px;
+    padding-top:52px;
+    margin-bottom:80px;
+}
+.cardsSection h1{
+
+    color:#fff;
+    font-weight:bold;
+    position:relative;
+}
+.cardsSection h1:after{
+
+    background-color: #fff;
+    bottom: -20px;
+    content: '';
+    display: block;
+    height: 9px;
+    letter-spacing: -0.5px;
+    position: absolute;
+    width: 180px;
+}
+.cardsSection ul li{
+
+    
+    font-size:18px;
+    list-style:none;
+    display:inline-block;
+    margin:0px 0 0px 100px
+}
+.cardsSection ul li a {
+
+    display:block;
+    padding-top:5px;
+    color:#fff;
+    transition:300ms all ease-in-out;
+}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.cardsSection ul li a:hover {
+	animation: bounce 2s;
+}
+
+/********* Terms  Section **********/
+.termsAndConditionHolder
+{
+    margin-bottom:80px;
+}
+.termsAndConditionHolder h1{
+
+    color:#333;
+    margin-bottom:60px;
+    position:relative;
+    font-weight:bold;
+}
+.termsAndConditionHolder h1:after{
+    background-color: #333;
+    bottom: -20px;
+    content: '';
+    display: block;
+    height: 8px;
+    position: absolute;
+    width: 150px;
+}
+.termsAndConditionHolder ul li{
+
+    list-style:none;
+    font-size:15px;
+    color:#777;
+    margin-bottom:10px;
+}
+/********* Terms  Section **********/
+
+/***** Upper Footer Section ******/
+.downloadApplicationsHolder {
+
+    background:rgba(3,75,123,0.8);
+    color:#fff;
+    min-height:200px;
+
+}
+ .downloadApplicationsHolder [class*="col-"]
+ {
+     direction:rtl;
+     float:right;
+     font-family:Tahoma;
+     text-align:right;
+ }
+ .downloadApplicationsHolder h1{
+
+     font-size:25px;
+ }
+
+/***** Upper Footer Section ******/
+/***** Footer *****/
+footer {
+    background: linear-gradient(79deg, #1a2980, #26d0ce);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1a2980, endColorstr=#26d0ce)";
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    min-height: 350px;
+}
+.footerCore
+{
+     background-image:url(../img/footer/footerBg.png);
+     min-height:inherit;
+     font-family:Tahoma;
+}
+.footerCore [class*="col-"]
+{
+    direction:rtl;
+    float:right;
+}
+.footerCore h2
+{
+    color: #34c4e8;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom:30px;
+    text-align: right;
+}
+
+.footerCore h2:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+
+}
+.footerCore ul li {
+
+    list-style:none;
+    margin:20px 0;
+    text-align:right;
+}
+.footerCore ul li i {
+
+    font-size: 20px;
+    float: right;
+    margin-left: 8px;
+}
+.footerCore ul li a {
+    color: #fff;
+    transition: 300ms all ease-in-out;
+    font-weight: 600;
+    font-size: 12px;
+    
+}
+.footerCore ul li a:hover{
+
+    padding-right:5px;
+}
+.footerCore .copyRights
+{
+    margin-top:50px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.footerCore .copyRights .visa img{
+
+    width:100px;
+    margin-bottom:10px;
+    display:inline-block;
+}
+/***** End Footer *****/

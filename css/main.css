@@ -30,7 +30,7 @@ a:hover,a:focus{
 	top: 0px;
 	left: 0px;
 	width: 0px;
-	height: 34px;
+	height: 100%;
 	background: rgba(255,255,255,0.3);
 	border-radius: 5px;
 	transition: all 2s ease;
@@ -39,17 +39,28 @@ a:hover,a:focus{
 	width: 100%;
 }
 /***** Top Navigation *****/
-.navbar-default
-{
-    background:rgba(0, 0, 0, 0.7);
+.navbar-default {
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 0;
     color: #fff;
     margin: 0;
     border: 0;
+    position: absolute;
+    width: 100%;
+    z-index:999
 }
 .navbar-default .navbar-nav > li > a
 {
     color:#fff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover
+{
+    background:none;
+    color:#fff;
+}
+.navbar-brand>img
+{
+    width:120px;
 }
 
 /***** Top Navigation  *****/
@@ -74,6 +85,10 @@ a:hover,a:focus{
 
     font-size:28px;
 }
+.islamLogo{
+    position: absolute;
+    bottom: -160px;
+}
 /***** End featured Area *****/
 
 /***** 3D Carousel *****/
@@ -94,9 +109,27 @@ a:hover,a:focus{
     position: absolute;
     bottom: -20px;
 }
+.Carousel .nav-tabs>li>a
+{
+    color: #751b53!important;
+    padding-left: 0;
+    min-width: 90px;
+    font-size: 20px;
+}
+.Carousel .nav-tabs>li.active > a:before
+{
+    color:#751b53;
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #751b53;
+    position: absolute;
+    bottom: 0;
+}
 .swiper-container
 {
-    height:575px;
+    height:570px;
 }
 .tab-content
 {
@@ -155,10 +188,25 @@ a:hover,a:focus{
     width:100%;
     padding:20px 20px 15px 20px
 }
-.slideDetails h2{
+.slideDetails a {
+    float: right;
+    width: 35px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 9px;
+    background: #d33497;
+    height: 35px;
+    text-align: center;
+    margin-top: 50px;
+}
+.slideDetails a i{
+    font-size:16px;
+}
+.slideDetails h2 {
 
     font-size: 36px;
-    margin-bottom: 0;
+    margin: 0;
+    display:inline-block;
     line-height: 1;
 }
 .slideDetails p {
@@ -166,6 +214,7 @@ a:hover,a:focus{
     font-size:16px;
     margin-bottom:30px;
     text-transform:uppercase;
+    height:18px;
 }
 .slideDetails p + p{
 
@@ -181,9 +230,14 @@ a:hover,a:focus{
 
 /***** flight Search Section *****/
 
-.flightSearchCore
-{
-    
+.flightSearchCore:before {
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #2e6f9be0 53%, #26699805 100%);
+    height: 40%;
+    width: 100%;
+    content: '';
+    z-index: 999;
 }
 
 .flightSearch h1{
@@ -206,20 +260,25 @@ a:hover,a:focus{
 }
 .flightSearch h2{
 
-    font-size:28px;
-    color:#fff;
-    font-weight:bold;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    z-index: 999;
+    left: 20px;
+}
+.flightSearchCore h2:after {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 100px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -15px;
 }
 .flightSearch {
-    background-color: rgba(24, 100, 134, 0.84);
-    /* IE9, iOS 3.2+ */
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDA3NmM0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM0YmFkZDIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjMzODk5OTk5OTk5OTk5OTk3Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzI3OGZiYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjgyOTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiM4ZWQ0ZjEiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(0, 118, 196)),color-stop(0.339, rgb(75, 173, 210)),color-stop(0.683, rgb(39, 143, 186)),color-stop(1, rgba(142, 212, 241, 0)));
-    /* Android 2.3 */
-    background-image: -webkit-repeating-linear-gradient(top,rgb(0, 118, 196) 0%,rgb(75, 173, 210) 33.9%,rgb(39, 143, 186) 68.3%,rgba(142, 212, 241, 0) 100%);
-    /* IE10+ */
-    background-image: repeating-linear-gradient(to bottom, #0378c4 50%, transparent 100%);
-    background-image: -ms-repeating-linear-gradient(top,rgb(0, 118, 196) 0%,rgb(75, 173, 210) 33.9%,rgb(39, 143, 186) 68.3%,rgba(142, 212, 241, 0) 100%);
+    background: url(../img/bg.png) center center;
+    background-size: cover;
 }
 
 /***** flight Search tabs *****/
@@ -228,18 +287,105 @@ a:hover,a:focus{
     background-color: rgba(0,0,0,0.4);
     padding: 20px;
     border-radius: 4px;
-    min-height:150px;
+    min-height:130px;
     margin-bottom:120px;
 }
- 
-.itemOne:before,.itemTwo:before,.itemThree:before{
+ .flightsTabs .input-group{
+     width:100%;
+ }
+.flightsTabs .input-group input
+{
+    height:45px;
+    width:100%;
+}
+ .flightsTabs .btn-default
+ {
+     width:100%;
+     text-align:left;
+     height:45px;
+     border-bottom-right-radius:0;
+     border-bottom-left-radius:0;
+     margin-bottom:2px;
+ }
+ .flightsTabs .btn-default span{
 
-    display: block;
-    position: relative;
-    background-image: linear-gradient(to bottom, #1478b9f2 53%, transparent 100%);
-    height: 30%;
-    width: 100%;
-    content: '';
+     float:right;
+     color:#bf3a91;
+ }
+.flightsTabs .mainBtn
+{
+    min-width: 100%;
+    padding-top: 25px;
+    height: 90px;
+}
+.flightsTabs .open>.dropdown-menu
+{
+    width:100%;
+}
+.nav-tabs
+{
+    border-bottom:none;
+    margin-bottom:30px;
+}
+.nav-tabs>li
+{
+    display: inline-block;
+    text-align: center;
+    float: none;
+
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover,.nav-tabs>li>a:hover
+{
+    color: #fff;
+    background-color: rgba(255,255,255,0.7);
+    border-bottom-color: transparent;
+    border-radius: 4px;
+    border-color:transparent;
+}
+.flightsTabs .form-control, .flightsTabs .input-group-addon
+{
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    margin-bottom:2px;
+}
+.flightsTabs .input-group-addon
+{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 40px;
+    height: 44px;
+    padding: 15px 0;
+    border-bottom:0;
+}
+.startTrip
+{
+    text-align:center;
+    padding:5px;
+    background:#fff;
+    border-radius:4px;
+    min-height:94px;
+}
+.startTrip span
+{
+    display:block;
+    color:#81275a;
+    font-size:20px;
+}
+.startTrip span.date,.startTrip span.days,.startTrip span.month
+{
+    font-size:15px;
+    color:#81275a;
+    display:inline-block;
+}
+.startTrip span.date{
+
+    font-size:30px;
+    display:block;
+}
+.startTrip span.days{
+    display:block;
+
 }
 .itemOne,.itemTwo,.itemThree
 {
@@ -358,7 +504,11 @@ a:hover,a:focus{
     font-size:18px;
     list-style:none;
     display:inline-block;
-    margin:0px 0 0px 100px
+    margin:0px 0 0px 60px
+}
+.cardsSection ul li:first-child
+{
+    margin-left:0;
 }
 .cardsSection ul li a {
 
@@ -428,7 +578,6 @@ a:hover,a:focus{
 }
  .downloadApplicationsHolder [class*="col-"]
  {
-     direction:rtl;
      float:right;
      font-family:Tahoma;
      text-align:right;
@@ -437,6 +586,10 @@ a:hover,a:focus{
 
      font-size:25px;
  }
+.downloadApplicationsHolder img.mobile{
+
+    margin-top:-45px;
+}
 
 /***** Upper Footer Section ******/
 /***** Footer *****/
@@ -515,3 +668,52 @@ footer {
     display:inline-block;
 }
 /***** End Footer *****/
+
+
+@media (max-width: 768px){
+.navbar-default
+{
+    background:rgba(0, 0, 0, 0.9);
+}
+.navbar-default .navbar-collapse,.navbar-default .navbar-toggle
+{
+    border-color:transparent;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
+{
+    background:transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+    width: 30px;
+    margin-bottom: 6px;
+}
+.navbar-brand {
+    padding: 20px 15px;  
+}
+
+.downloadApplicationsHolder [class*="col-"]
+{
+    text-align:center;
+}
+}
+@media (max-width: 960px) {
+
+    .cardsSection ul li {
+    font-size: 18px;
+    list-style: none;
+    margin:10px;
+}
+    .cardsSection ul li a:hover  
+    {
+        animation:initial;
+    }
+}
+@media (max-width: 960px) {
+
+    .cardsSection ul li {
+    display: block;
+}
+}
+
+
